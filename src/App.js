@@ -1,16 +1,11 @@
-// import logo from './logo.svg';
+
 import './App.css';
-import UploadPage from './components/UploadPage';
-// import ListingPage from './components/ListingPage';
-// import VideoPage from './components/VideoDisplayPage';
+import Routing from "./components/Routing"
 
 function App() {
   return (
     <div className="App">
-      {/* <h1>Srinu</h1> */}
-      <UploadPage/>
-      {/* <ListingPage/> */}
-      {/* <VideoPage/> */}
+      <Routing/>
     </div>
   );
 }

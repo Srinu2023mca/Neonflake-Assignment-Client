@@ -7,6 +7,8 @@ function VideoPage() {
     const [media, setMedia] = useState(null);
 
     useEffect(() => {
+        console.log("ID :", id)
+        console.log('Navigated to video page with ID:', id);
         const fetchMedia = async () => {
             const response = await axios.get(`http://localhost:5000/api/media/${id}`);
             setMedia(response.data);

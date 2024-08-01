@@ -19,10 +19,13 @@ function ListingPage() {
             <ul>
                 {mediaList.map(media => (
                     <li key={media._id}>
-                        <Link to={`/media/${media._id}`}>
+                        <Link to={`/videodisplay/${media._id}`}>
                             <img src={media.thumbnailUrl} alt={media.title} />
                             <p>{media.title}</p>
+                            
                         </Link>
+                        <Link to={`/videodisplay/${media._id}`}>Watch Video</Link>
+
                     </li>
                 ))}
             </ul>

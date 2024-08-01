@@ -21,10 +21,10 @@ function ListingPage() {
                     <li key={media._id}>
                         <Link to={`/videodisplay/${media._id}`}>
                             <img src={media.thumbnailUrl} alt={media.title} />
-                            <p>{media.title}</p>
+                            <p className='text-none'>{media.title}</p>
                             
                         </Link>
-                        <Link to={`/videodisplay/${media._id}`}>Watch Video</Link>
+                        
 
                     </li>
                 ))}

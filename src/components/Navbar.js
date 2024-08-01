@@ -5,9 +5,8 @@ const Navbar = () => {
   return (
     <nav style={styles.nav}>
       <ul style={styles.navList}>
-        <li style={styles.navItem}><Link style={styles.navLink} to="/">Upload Page</Link></li>
-        <li style={styles.navItem}><Link style={styles.navLink} to="/listing">Listing Page</Link></li>
-        {/* <li style={styles.navItem}><Link style={styles.navLink} to="/videodisplay">Video Display</Link></li> */}
+      <li style={styles.navItem}><Link style={styles.navLink} to="/">Listing </Link></li>
+        <li style={styles.navItem}><Link style={styles.navLink} to="/upload">Upload</Link></li>
       </ul>
     </nav>
   );
@@ -15,7 +14,7 @@ const Navbar = () => {
 
 const styles = {
   nav: {
-    backgroundColor: '#333',
+    backgroundColor: 'black',
     padding: '10px',
   },
   navList: {

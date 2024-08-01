@@ -12,8 +12,8 @@ const App = () => {
     <div>
         <Navbar/>
       <Routes>
-        <Route path="/" element={<UploadPage />} />
-        <Route path="/listing" element={<ListingPage />} />
+        <Route path="/" element={<ListingPage />} />
+        <Route path="/upload" element={<UploadPage/>} />
         <Route path="/videodisplay/:id" element={<VideoDisplayPage />} />
         <Route path="*" element={<NotFound />} />
       </Routes>

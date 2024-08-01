@@ -13,18 +13,32 @@ function UploadPage() {
         formData.append('description', description);
         formData.append('thumbnail', thumbnail);
         formData.append('video', video);
-
+        
         try {
+           
             const response = await axios.post('http://localhost:5000/api/media', formData);
             console.log('Upload successful:', response.data);
         } catch (error) {
-            console.error('Error uploading:', error);
+
+             if (error.response) {
+            // The request was made and the server responded with a status code
+            // that falls out of the range of 2xx
+            console.error('Error Response Data:', error.response.data);
+            console.error('Error Status:', error.response.status);
+            console.error('Error Headers:', error.response.headers);
+        } else if (error.request) {
+            // The request was made but no response was received
+            console.error('Error Request:', error.request);
+        } else {
+            // Something happened in setting up the request that triggered an Error
+            console.error('Axios Error:', error.message);
+        }
         }
     };
 
     return (
         <div className='main'>
-            <form className='form'>
+            <div className='form'>
             <h2 className='fs-bold'>Upload Media</h2>
             <div className='alignment'>
                 <label className='fs-bold'>Title :</label>
@@ -60,7 +74,7 @@ function UploadPage() {
             />
             <button className='btn btn-primary' onClick={handleUpload}>Upload</button>
             </div>
-            </form>
+            </div>
         </div>
     );
 }

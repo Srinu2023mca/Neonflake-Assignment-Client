@@ -7,7 +7,7 @@ function ListingPage() {
 
     useEffect(() => {
         const fetchMedia = async () => {
-            const response = await axios.get('https://neonflake-assignment-server.vercel.app/api/media');
+            const response = await axios.get('https://neonflake-assignment-server-1.onrender.com/api/media');
             setMediaList(response.data);
         };
         fetchMedia();
@@ -25,7 +25,7 @@ function ListingPage() {
                             <img src={media.thumbnailUrl} alt={media.title} width={300} height={200} className='border border-primary rounded'/>
                             <button className='btn btn-warning my-3 py-1 px-3'>
                             
-                            <span className='px-2'>Watch Now</span><i class="bi bi-caret-left-square-fill"></i> </button>
+                            <span className='px-2'>Watch Now</span><i className="bi bi-caret-left-square-fill"></i> </button>
                         </Link>
                         
 

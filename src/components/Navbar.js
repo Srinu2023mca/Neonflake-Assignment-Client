@@ -18,7 +18,7 @@ const Navbar = () => {
           <button className="btn btn-outline-primary" type="submit">Search</button>
         </form> */}
         <Link className='btn btn-primary' to="/upload">
-        <i class="bi bi-cloud-upload"></i>
+        <i className="bi bi-cloud-upload"></i>
         <span className='mx-2'>Upload</span></Link>
       </div>
  

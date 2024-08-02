@@ -17,7 +17,7 @@ function UploadPage() {
 
     try {
       const response = await axios.post(
-        "https://neonflake-assignment-server.vercel.app/api/media",
+        "https://neonflake-assignment-server-1.onrender.com/api/media",
         formData
       );
       toast.success("Video Upload successfully");
@@ -70,7 +70,7 @@ function UploadPage() {
           />
           <div className="w-100">
           <button className="upload-btn" onClick={handleUpload}>
-          <i class="bi bi-cloud-arrow-up "></i>
+          <i className="bi bi-cloud-arrow-up "></i>
           <span className="mx-2">Upload</span>
           </button>
           </div>

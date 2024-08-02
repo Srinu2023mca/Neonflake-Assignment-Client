@@ -10,7 +10,7 @@ function VideoPage() {
         console.log("ID :", id)
         console.log('Navigated to video page with ID:', id);
         const fetchMedia = async () => {
-            const response = await axios.get(`https://neonflake-assignment-server.vercel.app/api/media/${id}`);
+            const response = await axios.get(`https://neonflake-assignment-server-1.onrender.com/api/media/${id}`);
             setMedia(response.data);
         };
         fetchMedia();
@@ -28,7 +28,7 @@ function VideoPage() {
             </video>
             <p className='description text-light'>{media.description}</p>
             <Link className='btn btn-primary px-3 py-1 fs-5' to="/">
-            <i class="bi bi-arrow-left-circle"></i>
+            <i className="bi bi-arrow-left-circle"></i>
             <span className='px-2'>Back</span></Link>
             </div>
             

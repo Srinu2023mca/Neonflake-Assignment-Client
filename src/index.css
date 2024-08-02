@@ -12,13 +12,15 @@ code {
     monospace;
 }
 
+/* Upload Page */
  .main{
   width: 100vw;
   height: 100vh;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  background-color: rgba(159, 252, 252, 0.499);
+  /* justify-content: center; */
+  background-color: rgba(159, 252, 252, 0.415);
  }
 .form{
   width:700px;
@@ -27,9 +29,10 @@ code {
   flex-direction:column;
   align-items: center;
   justify-content: center;
-  background-color: rgba(120, 134, 241, 0.614);
+  background:linear-gradient(to bottom left, rgba(0, 0, 255, 0.862),rgba(0, 0, 255, 0.566), aqua );
   padding: 1rem;
   border-radius: 10px;
+  margin-top: 5rem;
 }
 
 .alignment{
@@ -39,4 +42,74 @@ code {
   justify-content:start;
   gap: 10px;
 
+}
+
+.upload-btn{
+  background-color: blue;
+  outline: none;
+  color: white;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  
+}
+
+/* Media List */
+.list-main{
+  width: 100vw;
+  height:auto;
+  min-height: 100vh;
+  background-color: rgba(159, 252, 252, 0.415);
+}
+
+li{
+  list-style: none;
+ 
+}
+.thumbnail{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.cut-border{
+  margin: 5px;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+
+/* video Page */
+.video-main{
+  width: 100vw;
+  height:auto;
+  min-height: 100vh;
+  background-color: rgba(159, 252, 252, 0.308);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+padding: 1rem;
+}
+.window{
+  border-radius: 5px;
+  width: 90%;
+  padding: 10px;
+  background-color: rgba(4, 4, 255, 0.937);
+}
+.video{
+  background-color: white;
+  padding:3px;
+  border-radius:10px;
+  width: 95%;
+}
+
+.description{
+  display: flex;
+  align-items: start;
+  justify-content: start;
+  margin: 1rem;
+  border-radius: 5px;
+  padding: 5px;
 }

@@ -14,15 +14,18 @@ function ListingPage() {
     }, []);
 
     return (
-        <div>
-            <h2>Media List</h2>
-            <ul>
+        <div className='list-main'>
+            <h2 className='py-3 mb-4 bg-primary text-light'>Media List</h2>
+            <ul className='row'>
                 {mediaList.map(media => (
-                    <li key={media._id}>
-                        <Link to={`/videodisplay/${media._id}`}>
-                            <img src={media.thumbnailUrl} alt={media.title} />
-                            <p className='text-none'>{media.title}</p>
+                    <li key={media._id} className='col-sm cut-border'>
+                        
+                        <Link to={`/videodisplay/${media._id}`} className='text-decoration-none thumbnail'>
+                        <p className='fw-semibold my-3'>{media.title}</p>
+                            <img src={media.thumbnailUrl} alt={media.title} width={300} height={200} className='border border-primary rounded'/>
+                            <button className='btn btn-warning my-3 py-1 px-3'>
                             
+                            <span className='px-2'>Watch Now</span><i class="bi bi-caret-left-square-fill"></i> </button>
                         </Link>
                         
 

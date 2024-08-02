@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 
 function VideoPage() {
     const { id } = useParams();
@@ -19,13 +19,19 @@ function VideoPage() {
     if (!media) return <div>Loading...</div>;
 
     return (
-        <div>
-            <h2>{media.title}</h2>
-            <video controls autoPlay>
+        <div className='video-main'>
+            <div className='window'>
+            <h2 className='text-light my-3'>{media.title}</h2>
+            <video controls autoPlay className='video'>
                 <source src={media.videoUrl} type="video/mp4" />
                 Your browser does not support the video tag.
             </video>
-            <p>{media.description}</p>
+            <p className='description text-light'>{media.description}</p>
+            <Link className='btn btn-primary px-3 py-1 fs-5' to="/">
+            <i class="bi bi-arrow-left-circle"></i>
+            <span className='px-2'>Back</span></Link>
+            </div>
+            
         </div>
     );
 }

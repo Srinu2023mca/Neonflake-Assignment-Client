@@ -17,7 +17,7 @@ function UploadPage() {
 
     try {
       const response = await axios.post(
-        "http://localhost:5000/api/media",
+        "https://neonflake-assignment-server.vercel.app/api/media",
         formData
       );
       toast.success("Video Upload successfully");
@@ -35,7 +35,7 @@ function UploadPage() {
   return (
     <div className="main">
       <div className="form">
-        <h2 className="fs-bold">Upload Media</h2>
+        <h2 className="fs-bold text-light">Upload Media</h2>
         <div className="alignment">
           <label className="fw-semibold text-dark">Title :</label>
           <input
@@ -68,10 +68,13 @@ function UploadPage() {
             accept="video/mp4,video/avi,video/mpg"
             onChange={(e) => setVideo(e.target.files[0])}
           />
+          <div className="w-100">
           <button className="upload-btn" onClick={handleUpload}>
           <i class="bi bi-cloud-arrow-up "></i>
           <span className="mx-2">Upload</span>
           </button>
+          </div>
+          
         </div>
       </div>
       <ToastContainer />

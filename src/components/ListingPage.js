@@ -7,7 +7,7 @@ function ListingPage() {
 
     useEffect(() => {
         const fetchMedia = async () => {
-            const response = await axios.get('http://localhost:5000/api/media');
+            const response = await axios.get('https://neonflake-assignment-server.vercel.app/api/media');
             setMediaList(response.data);
         };
         fetchMedia();
